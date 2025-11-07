@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乒乓球比赛记分牌</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏓 乒乓球比赛记分牌</h1>
+        </header>
+
+        <main>
+            <!-- 选手信息输入区域 -->
+            <div class="player-input-section">
+                <div class="input-group">
+                    <label for="playerA">选手A名字：</label>
+                    <input type="text" id="playerA" placeholder="请输入选手A的名字" maxlength="20">
+                </div>
+                <div class="input-group">
+                    <label for="playerB">选手B名字：</label>
+                    <input type="text" id="playerB" placeholder="请输入选手B的名字" maxlength="20">
+                </div>
+            </div>
+
+            <!-- 记分牌区域 -->
+            <div class="scoreboard">
+                <div class="player-card player-a">
+                    <div class="player-name" id="nameA">选手A</div>
+                    <div class="score" id="scoreA">0</div>
+                    <div class="score-controls">
+                        <button class="btn btn-minus" onclick="changeScore('A', -1)">-</button>
+                        <button class="btn btn-plus" onclick="changeScore('A', 1)">+</button>
+                    </div>
+                </div>
+
+                <div class="vs-divider">VS</div>
+
+                <div class="player-card player-b">
+                    <div class="player-name" id="nameB">选手B</div>
+                    <div class="score" id="scoreB">0</div>
+                    <div class="score-controls">
+                        <button class="btn btn-minus" onclick="changeScore('B', -1)">-</button>
+                        <button class="btn btn-plus" onclick="changeScore('B', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 操作按钮区域 -->
+            <div class="action-buttons">
+                <button class="btn btn-reset" onclick="resetScore()">重置分数</button>
+                <button class="btn btn-save" onclick="saveMatch()">保存比赛</button>
+                <button class="btn btn-history" onclick="viewHistory()">查看历史记录</button>
+            </div>
+
+            <!-- 提示信息 -->
+            <div id="message" class="message"></div>
+        </main>
+    </div>
+
+    <script src="js/scoreboard.js"></script>
+</body>
+</html>
+

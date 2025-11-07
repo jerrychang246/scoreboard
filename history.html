@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>比赛历史记录 - 乒乓球记分牌</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="history-container">
+        <header class="history-header">
+            <h1>📊 比赛历史记录</h1>
+            <a href="index.html" class="back-button">返回记分牌</a>
+        </header>
+
+        <main>
+            <div id="matchList" class="match-list">
+                <!-- 比赛记录将通过JavaScript动态加载 -->
+            </div>
+            
+            <div id="emptyMessage" class="empty-message" style="display: none;">
+                暂无比赛记录，快去开始第一场比赛吧！
+            </div>
+        </main>
+    </div>
+
+    <script src="js/history.js"></script>
+</body>
+</html>
+
